@@ -1,5 +1,5 @@
 // ihex.cpp
-// (c) 2012 Mario Konrad <mario.konrad@gmx.net>
+// (c) 2015 Mario Konrad <mario.konrad@gmx.net>
 //
 // this software is distributed under the license: GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html)
 
@@ -284,7 +284,7 @@ std::istream & operator >> (std::istream & is, Record & rec)
 	iss >> checksum;
 
 	if (checksum != rec.checksum()) throw Record::checksum_exception(checksum, rec.checksum());
-	
+
 	return is;
 }
 
@@ -638,12 +638,13 @@ static void print_version(void)
 
 	cout << "ihex 1.0.0" << endl;
 	cout << endl;
-	cout << "(c) 2012 Mario Konrad" << endl;
+	cout << "(c) 2015 Mario Konrad" << endl;
 	cout << endl;
 	cout << "This software is distributed under the terms of GPLv2." << endl;
 	cout << "http://www.gnu.org/licenses/gpl-2.0.html" << endl;
 	cout << endl;
 	cout << "find the source at: http://www.mario-konrad.ch/wiki/doku.php?id=software:ihex:start" << endl;
+	cout << "or at github: https://github.com/mariokonrad/ihex" << endl;
 }
 
 static void usage(const char * name)
